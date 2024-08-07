@@ -22,6 +22,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+
+# Build job 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies and build
+        run: |
+          cd ./portfolio-victor
+          npm install
+          npm run build
+        working-directory: /portfolio-victor
+        
   # Deployment job
   deploy:
     environment:
@@ -45,7 +61,7 @@ jobs:
       - name: Upload artifact 
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './portfolio-victor/dist'
       - name: Deploy to Github Pages 
         id: deployment
         uses: actions/deploy-pages@v4
