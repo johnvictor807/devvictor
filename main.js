@@ -11,29 +11,43 @@ const navBarList = document.querySelector(".navbar-list");
 const navMobileOpen = document.querySelector(".nav-open");
 const navMobileClose = document.querySelector(".nav-close");
 
-tabGroup.forEach(function (tab, i) {
-  tabGroup[i].style.transform = `translateX(${i * 100}%)`;
+tabGroup.forEach((s, i) => (s.style.transform = `translateX(${i * 100}%)`));
+
+navLinks.forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    const number = event.target.getAttribute("data-number");
+    tabGroup.forEach((elem, ind) => {
+      elem.style.transform = `translateX(${100 * (ind - number)}%)`;
+      window.innerWidth < 768 &&
+        (document.querySelector("#nav").style.display = "none");
+      document.querySelector(".home").style.filter = "blur(0px)";
+    });
+  });
 });
 
-navLinks.forEach((e) =>
-  e.addEventListener("mouseenter", function (f) {
-    f.target.classList.add("hovered");
-  })
-);
+// tabGroup.forEach(function (tab, i) {
+//   tabGroup[i].style.transform = `translateX(${i * 100}%)`;
+// });
 
-navLinks[0].classList.add("clicked");
+// navLinks.forEach((e) =>
+//   e.addEventListener("mouseenter", function (f) {
+//     f.target.classList.add("hovered");
+//   })
+// );
 
-navLinks.forEach((e) =>
-  e.addEventListener("mouseleave", function (e) {
-    e.target.classList.remove("hovered");
-  })
-);
+// navLinks[0].classList.add("clicked");
 
-navBarList.addEventListener("click", function (e) {
-  navLinks.forEach((i) => i.classList.remove("clicked"));
-  const clicked = e.target.closest(".nav-link");
-  clicked.classList.add("clicked");
-});
+// navLinks.forEach((e) =>
+//   e.addEventListener("mouseleave", function (e) {
+//     e.target.classList.remove("hovered");
+//   })
+// );
+
+// navBarList.addEventListener("click", function (e) {
+//   navLinks.forEach((i) => i.classList.remove("clicked"));
+//   const clicked = e.target.closest(".nav-link");
+//   clicked.classList.add("clicked");
+// });
 
 window.innerWidth < 768 &&
   (document.querySelector("#nav").style.display = "none");
