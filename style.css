@@ -207,37 +207,39 @@ body {
 }
 
 .buttons-ind {
+  cursor: pointer;
   height: 3rem;
   padding: 0 1.5rem;
   border-radius: 3rem;
   border: none;
   background-color: rgb(255, 189, 57);
   margin-right: 1rem;
-}
-
-.buttons-ind > a {
   color: black;
-  text-decoration: none;
   font-family: Poppins;
   font-size: small;
   font-weight: bold;
 }
 
+.link1 {
+  text-decoration: none;
+}
+
 .buttons-ind2 {
+  cursor: pointer;
   height: 3rem;
   padding: 0 1.5rem;
   border-radius: 3rem;
   border: none;
   background-color: transparent;
   border: 0.1rem solid hsl(25, 100%, 94%);
-}
-
-.buttons-ind2 > a {
-  text-decoration: none;
   font-family: Poppins;
   font-size: small;
   color: hsl(25, 100%, 94%);
   font-weight: bold;
+}
+
+.link2 {
+  text-decoration: none;
 }
 
 #home-section {
@@ -546,19 +548,6 @@ fieldset {
     transition: all 0.5s ease;
   }
 
-  #nav:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    background-color: rgb(0, 0, 0);
-    z-index: 1;
-    width: 70vw;
-    height: 100vh;
-    padding: 2.5rem 2rem;
-    transition: 0.5s;
-  }
-
   #left-image {
     width: 6rem;
     margin: 0;
@@ -632,6 +621,11 @@ fieldset {
     font-size: 1.5rem;
   }
 
+  .social-media-mobile ul li a {
+    text-decoration: none;
+    color: hsl(25, 100%, 94%);
+  }
+
   .hovered::after {
     content: "";
     position: absolute;
@@ -666,18 +660,18 @@ fieldset {
     position: relative;
     background-image: url(/bg_mobile.jpg);
     background-size: cover;
-    height: 100vh;
     width: 100vw;
     position: relative;
   }
 
   .home {
-    max-height: 100%;
+    /* max-height: 100%; */
     position: relative;
     overflow: hidden;
     display: flex;
     width: 90vw;
     margin: 0 auto;
+    height: 67vh;
   }
 
   .home-slider {
@@ -694,6 +688,10 @@ fieldset {
     display: flex;
     justify-content: center;
     opacity: 1;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    z-index: 1;
     display: none;
   }
 
@@ -719,7 +717,7 @@ fieldset {
   }
 
   .text > h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
     margin-top: 1rem;
     margin-bottom: 0;
@@ -732,7 +730,7 @@ fieldset {
   }
 
   .more-me h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
     margin-top: 1rem;
     margin-bottom: 4rem;
@@ -744,7 +742,7 @@ fieldset {
     line-height: 3rem;
     font-family: Poppins;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 189, 57);
   }
 
@@ -752,7 +750,7 @@ fieldset {
     font-family: Poppins;
     color: rgb(255, 189, 57);
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 
   .buttons {
@@ -769,9 +767,6 @@ fieldset {
     border: none;
     background-color: rgb(255, 189, 57);
     margin: 0 auto;
-  }
-
-  .buttons-ind > a {
     color: black;
     text-decoration: none;
     font-family: Poppins;
@@ -789,9 +784,7 @@ fieldset {
     border: none;
     background-color: transparent;
     border: 0.1rem solid hsl(25, 100%, 94%);
-  }
-
-  .buttons-ind2 > a {
+    color: hsl(25, 100%, 94%);
     text-decoration: none;
     font-family: Poppins;
     font-size: large;
@@ -802,7 +795,7 @@ fieldset {
   #home-section {
     background: none;
     opacity: 1;
-    height: 85vh;
+    height: 67vh;
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
@@ -822,7 +815,7 @@ fieldset {
     margin-left: auto;
     margin-right: auto;
     padding: 0rem;
-    height: 85vh;
+    height: 67vh;
     width: 90vw;
     max-height: 100%;
     border-radius: 0.2rem;
@@ -871,6 +864,7 @@ fieldset {
   }
 
   .p2 {
+    display: none;
     font-size: x-small;
     text-align: left;
   }
@@ -881,7 +875,7 @@ fieldset {
     padding: 0 1rem;
     width: -moz-fit-content;
     width: fit-content;
-    border-radius: 0;
+    border-radius: 3px;
     border: none;
     background-color: rgb(255, 189, 57);
     margin: 0 auto;
@@ -908,16 +902,17 @@ fieldset {
   .skills-group {
     display: block;
     margin-bottom: 0rem;
-    font-size: large;
+    font-size: medium;
   }
 
   .skill-bar {
     margin-top: 1rem;
     content: "";
     width: 100%;
-    height: 0.5rem;
+    height: 0.3rem;
     background-color: rgb(255, 189, 57);
   }
+
   #projects-section {
     position: absolute;
     top: 0;
@@ -926,7 +921,7 @@ fieldset {
     margin-right: auto;
     padding: 0;
     width: 90vw;
-    height: 85vh;
+    height: 80vh;
     max-height: 100%;
     border-radius: 0.2rem;
   }
@@ -1082,5 +1077,12 @@ fieldset {
   .contact-social li a {
     margin-right: 1rem;
     color: hsl(25, 100%, 94%);
+  }
+
+  #bottom {
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
   }
 }

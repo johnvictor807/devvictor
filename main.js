@@ -13,14 +13,18 @@ const navMobileClose = document.querySelector(".nav-close");
 
 tabGroup.forEach((s, i) => (s.style.transform = `translateX(${i * 100}%)`));
 
+const closeDisplayNavMobile = function () {
+  document.querySelector("#nav").style.transform = "translateX(100%)";
+  document.querySelector(".home").style.filter = "blur(0px)";
+  document.querySelector("#left-image").style.filter = "blur(0px)";
+};
+
 navLinks.forEach(function (item) {
   item.addEventListener("click", function (event) {
     const number = event.target.getAttribute("data-number");
     tabGroup.forEach((elem, ind) => {
       elem.style.transform = `translateX(${100 * (ind - number)}%)`;
-      window.innerWidth < 768 &&
-        (document.querySelector("#nav").style.display = "none");
-      document.querySelector(".home").style.filter = "blur(0px)";
+      window.innerWidth < 768 && closeDisplayNavMobile();
     });
   });
 });
@@ -46,20 +50,20 @@ navBarList.addEventListener("click", function (e) {
 });
 
 window.innerWidth < 768 &&
-  (document.querySelector("#nav").style.display = "none");
+  (document.querySelector("#nav").style.transform = "translateX(100%)");
 
 //Nav menu dropdown
 navMobileOpen.addEventListener("click", function () {
-  document.querySelector("#nav").style.display = "block";
+  document.querySelector("#nav").style.transform = "translateX(0%)";
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 768) {
     document.querySelector(".home").style.filter = "blur(2px)";
+    document.querySelector("#left-image").style.filter = "blur(2px)";
   }
 });
 
 navMobileClose.addEventListener("click", function () {
-  document.querySelector("#nav").style.display = "none";
-  document.querySelector(".home").style.filter = "blur(0px)";
+  closeDisplayNavMobile();
 });
 
 // const removeclick = function (e) {
