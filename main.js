@@ -5,6 +5,7 @@ const resume = document.querySelector("#resume-section");
 const skills = document.querySelector("#skills-section");
 const projects = document.querySelector("#projects-section");
 const contact = document.querySelector("#contact-section");
+const navBar = document.querySelector("#nav");
 const navLinks = document.querySelectorAll(".nav-link");
 const tabGroup = [home, resume, skills, projects, contact];
 const navBarList = document.querySelector(".navbar-list");
@@ -12,12 +13,24 @@ const navMobileOpen = document.querySelector(".nav-open");
 const navMobileClose = document.querySelector(".nav-close");
 
 tabGroup.forEach((s, i) => (s.style.transform = `translateX(${i * 100}%)`));
+window.innerWidth < 768 &&
+  (document.querySelector("#nav").style.transform = "translateX(100%)");
 
-const closeDisplayNavMobile = function () {
+document
+  .querySelector(".home")
+  .addEventListener("click", closeDisplayNavMobile2);
+
+function closeDisplayNavMobile() {
   document.querySelector("#nav").style.transform = "translateX(100%)";
   document.querySelector(".home").style.filter = "blur(0px)";
   document.querySelector("#left-image").style.filter = "blur(0px)";
-};
+}
+
+function closeDisplayNavMobile2() {
+  if (document.querySelector("#nav").style.transform == "translateX(0%)") {
+    closeDisplayNavMobile();
+  }
+}
 
 navLinks.forEach(function (item) {
   item.addEventListener("click", function (event) {
@@ -49,9 +62,6 @@ navBarList.addEventListener("click", function (e) {
   clicked.classList.add("clicked");
 });
 
-window.innerWidth < 768 &&
-  (document.querySelector("#nav").style.transform = "translateX(100%)");
-
 //Nav menu dropdown
 navMobileOpen.addEventListener("click", function () {
   document.querySelector("#nav").style.transform = "translateX(0%)";
@@ -65,26 +75,3 @@ navMobileOpen.addEventListener("click", function () {
 navMobileClose.addEventListener("click", function () {
   closeDisplayNavMobile();
 });
-
-// const removeclick = function (e) {
-//   e.target.classList.remove("clicked");
-// };
-
-// const obsCallback = function (entries, observer) {
-//   const [entry] = entries;
-//   console.log(entry);
-//   // const index = tabGroup.indexOf(entry.target);
-//   // entry.isIntersecting &&
-//   //   console.log(index, entry.target.id, entry.isIntersecting);
-// };
-
-// const obsOptions = {
-//   root: null,
-//   threshold: 0.5,
-// };
-
-// const observer = new IntersectionObserver(obsCallback, obsOptions);
-
-// tabGroup.forEach(function (elem, i) {
-//   observer.observe(elem);
-// });

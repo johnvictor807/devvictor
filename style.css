@@ -381,7 +381,7 @@ body {
   height: 85vh;
   max-height: 100%;
   border-radius: 0.2rem;
-  transition: all 0.5s ease-in;
+  transition: all 0.5s ease-out;
 }
 
 .contact {
@@ -531,10 +531,6 @@ fieldset {
     /* background-color: #000000; */
   }
 
-  .nav {
-    display: flex;
-  }
-
   #nav {
     position: absolute;
     top: 0;
@@ -672,7 +668,7 @@ fieldset {
     display: flex;
     width: 90vw;
     margin: 0 auto;
-    height: 67vh;
+    height: 70vh;
   }
 
   .home-slider {
@@ -1145,34 +1141,6 @@ fieldset {
     border-radius: 0.2rem;
   }
 
-  /* .words {
-    color: hsl(25, 100%, 94%);
-    font-size: 0;
-    line-height: 1;
-  }
-
-  .words span {
-    font-size: 1.7rem;
-    display: inline-block;
-    animation: move 3s ease-in-out infinite;
-  }
-
-  @keyframes move {
-    0% {
-      transform: translate(-5%, 0);
-    }
-    50% {
-      text-shadow: 0 5px 15px rgba(255, 189, 57, 0.961);
-    }
-    100% {
-      transform: translate(5%, 0);
-    }
-  }
-
-  .words span:nth-child(2) {
-    animation-delay: 0.5s;
-  } */
-
   #contact-section {
     position: absolute;
     top: 0;
@@ -1181,7 +1149,7 @@ fieldset {
     margin-right: auto;
     padding: 0;
     width: 90vw;
-    height: 85vh;
+    height: 80vh;
     max-height: 100%;
     border-radius: 0.2rem;
   }
@@ -1224,11 +1192,12 @@ fieldset {
     color: hsl(36, 3%, 35%);
     appearance: none;
     background-color: transparent;
-    padding-bottom: 1rem;
+    padding-bottom: 0.2rem;
     width: 100%;
     background: none;
     border: none;
     font-size: 0.8rem;
+    border-radius: 0;
     border-bottom: 0.1rem solid hsl(36, 3%, 35%);
   }
 
@@ -1287,6 +1256,7 @@ fieldset {
   .contact-secondary {
     background-color: rgba(0, 0, 0, 0.875);
     padding: 1rem;
+    height: 10rem;
   }
 
   .contact-info {
