@@ -24,7 +24,7 @@ navLinks.forEach(function (item) {
     const number = event.target.getAttribute("data-number");
     tabGroup.forEach((elem, ind) => {
       elem.style.transform = `translateX(${100 * (ind - number)}%)`;
-      window.innerWidth < 768 && closeDisplayNavMobile();
+      window.innerWidth < 768 && setTimeout(closeDisplayNavMobile, 800);
     });
   });
 });

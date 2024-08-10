@@ -244,7 +244,7 @@ body {
 
 #home-section {
   opacity: 1;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   background-color: rgba(40, 37, 37, 0.889);
   display: flex;
@@ -264,7 +264,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 3rem;
-  height: 80vh;
+  height: 85vh;
   width: 90vw;
   max-height: 100%;
   border-radius: 0.2rem;
@@ -331,7 +331,7 @@ body {
   margin-right: auto;
   padding: 1rem 3rem;
   width: 90vw;
-  height: 80vh;
+  height: 85vh;
   max-height: 100%;
   border-radius: 0.2rem;
   transition: all 0.5s ease-in;
@@ -361,7 +361,7 @@ body {
   margin-right: auto;
   padding: 1rem 3rem;
   width: 90vw;
-  height: 80vh;
+  height: 85vh;
   max-height: 100%;
   border-radius: 0.2rem;
   transition: all 0.5s ease-in;
@@ -378,7 +378,7 @@ body {
   /* margin-top: 1rem; */
   padding: 1rem 3rem;
   width: 90vw;
-  height: 80vh;
+  height: 85vh;
   max-height: 100%;
   border-radius: 0.2rem;
   transition: all 0.5s ease-in;
@@ -551,6 +551,7 @@ fieldset {
   #left-image {
     width: 6rem;
     margin: 0;
+    animation: pulse 2s infinite alternate;
   }
 
   .nav-left-side {
@@ -593,7 +594,7 @@ fieldset {
 
   .nav-mobile p {
     color: rgb(255, 189, 57);
-    font-size: small;
+    font-size: x-small;
   }
 
   .nav-item {
@@ -730,12 +731,217 @@ fieldset {
   }
 
   .more-me h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     color: hsl(25, 100%, 94%);
     max-width: 100%;
+  }
+
+  .more-me h1 span {
+    animation: move 2s ease-in-out infinite;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(-5%, 0);
+    }
+    50% {
+      text-shadow: 0 0px 10px rgba(255, 189, 57, 0.961);
+    }
+    100% {
+      transform: translate(5%, 0);
+    }
+  }
+
+  .more-me h1 span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  .more-me h1 span:nth-child(3) {
+    animation-delay: 1s;
+  }
+
+  .more-me h1 span:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+
+  .more-me h1 span:nth-child(5) {
+    animation-delay: 2s;
+  }
+
+  .more-me h1 span:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+
+  .more-me h1 span:nth-child(7) {
+    animation-delay: 3s;
+  }
+
+  .more-me h1 span:nth-child(8) {
+    animation-delay: 3.5s;
+  }
+
+  .more-me h1 span:nth-child(9) {
+    animation-delay: 4s;
+  }
+
+  .more-me h1 span:nth-child(10) {
+    animation-delay: 4.5s;
+  }
+
+  .more-me h1 span:nth-child(11) {
+    animation-delay: 5s;
+  }
+
+  .more-me h1 span:nth-child(12) {
+    animation-delay: 5.5s;
+  }
+
+  .more-me h1 span:nth-child(13) {
+    animation-delay: 6s;
+  }
+
+  .more-me h1 span:nth-child(14) {
+    animation-delay: 6.5s;
+  }
+
+  .more-me h1 span:nth-child(15) {
+    animation-delay: 7s;
+  }
+
+  .more-me h1 span:nth-child(16) {
+    animation-delay: 7.5s;
+  }
+
+  .more-me h1 span:nth-child(17) {
+    animation-delay: 8s;
+  }
+
+  .more-me h1 span:nth-child(18) {
+    animation-delay: 8.5s;
+  }
+
+  .more-me h1 span:nth-child(19) {
+    animation-delay: 9s;
+  }
+
+  .more-me h1 span:nth-child(20) {
+    animation-delay: 9.5s;
+  }
+
+  .more-me h1 span:nth-child(21) {
+    animation-delay: 10s;
+  }
+
+  .more-me h1 span:nth-child(22) {
+    animation-delay: 10.5s;
+  }
+
+  .more-me h1 span:nth-child(23) {
+    animation-delay: 11s;
+  }
+
+  .more-me h1 span:nth-child(24) {
+    animation-delay: 11.5s;
+  }
+
+  .more-me h1 span:nth-child(25) {
+    animation-delay: 12s;
+  }
+
+  .more-me h1 span:nth-child(26) {
+    animation-delay: 12.5s;
+  }
+
+  .more-me h1 span:nth-child(27) {
+    animation-delay: 13s;
+  }
+
+  .more-me h1 span:nth-child(28) {
+    animation-delay: 13.5s;
+  }
+
+  .more-me h1 span:nth-child(29) {
+    animation-delay: 14s;
+  }
+
+  .more-me h1 span:nth-child(30) {
+    animation-delay: 14.5s;
+  }
+
+  .more-me h1 span:nth-child(31) {
+    animation-delay: 15s;
+  }
+  .more-me h1 span:nth-child(32) {
+    animation-delay: 15.5s;
+  }
+  .more-me h1 span:nth-child(33) {
+    animation-delay: 16s;
+  }
+  .more-me h1 span:nth-child(34) {
+    animation-delay: 16.5s;
+  }
+  .more-me h1 span:nth-child(35) {
+    animation-delay: 17s;
+  }
+  .more-me h1 span:nth-child(36) {
+    animation-delay: 17.5s;
+  }
+  .more-me h1 span:nth-child(37) {
+    animation-delay: 18s;
+  }
+  .more-me h1 span:nth-child(38) {
+    animation-delay: 18.5s;
+  }
+  .more-me h1 span:nth-child(39) {
+    animation-delay: 19s;
+  }
+  .more-me h1 span:nth-child(40) {
+    animation-delay: 19.5s;
+  }
+  .more-me h1 span:nth-child(41) {
+    animation-delay: 20s;
+  }
+  .more-me h1 span:nth-child(42) {
+    animation-delay: 20.5s;
+  }
+  .more-me h1 span:nth-child(43) {
+    animation-delay: 21s;
+  }
+  .more-me h1 span:nth-child(44) {
+    animation-delay: 21.5s;
+  }
+  .more-me h1 span:nth-child(45) {
+    animation-delay: 22s;
+  }
+  .more-me h1 span:nth-child(46) {
+    animation-delay: 22.5s;
+  }
+  .more-me h1 span:nth-child(47) {
+    animation-delay: 23s;
+  }
+  .more-me h1 span:nth-child(48) {
+    animation-delay: 23.5s;
+  }
+  .more-me h1 span:nth-child(49) {
+    animation-delay: 24s;
+  }
+  .more-me h1 span:nth-child(50) {
+    animation-delay: 24.5s;
+  }
+  .more-me h1 span:nth-child(51) {
+    animation-delay: 25.5s;
+  }
+  .more-me h1 span:nth-child(52) {
+    animation-delay: 25.5s;
+  }
+  .more-me h1 span:nth-child(53) {
+    animation-delay: 26s;
+  }
+  .more-me h1 span:nth-child(30) {
+    animation-delay: 26.5s;
   }
 
   .subheading {
@@ -751,6 +957,18 @@ fieldset {
     color: rgb(255, 189, 57);
     font-weight: 900;
     font-size: 2.1rem;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .buttons {
@@ -771,7 +989,7 @@ fieldset {
     text-decoration: none;
     font-family: Poppins;
     font-size: large;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .buttons-ind2 {
@@ -789,7 +1007,7 @@ fieldset {
     font-family: Poppins;
     font-size: large;
     color: hsl(25, 100%, 94%);
-    font-weight: bold;
+    font-weight: 600;
   }
 
   #home-section {
@@ -828,6 +1046,7 @@ fieldset {
     color: rgb(255, 189, 57);
     opacity: 1;
     margin-bottom: 1rem;
+    font-weight: 600;
   }
 
   .resume-stack {
@@ -843,11 +1062,12 @@ fieldset {
 
   .stack-design h3 {
     color: rgb(255, 189, 57);
-    font-size: medium;
-    font-weight: 400;
+    font-size: small;
+    font-weight: 600;
   }
 
   .stack-design p {
+    font-weight: 600;
     color: rgb(153, 153, 153);
   }
 
@@ -855,6 +1075,7 @@ fieldset {
     color: hsl(25, 100%, 94%);
     margin-bottom: 0rem;
     font-size: medium;
+    font-weight: 600;
   }
 
   .p1 {
@@ -878,11 +1099,9 @@ fieldset {
     border-radius: 3px;
     border: none;
     background-color: rgb(255, 189, 57);
-    margin: 0 auto;
-  }
-
-  .download-cv a {
-    font-size: medium;
+    margin: 1rem auto;
+    font-size: small;
+    border-radius: 0;
   }
 
   #skills-section {
@@ -925,6 +1144,34 @@ fieldset {
     max-height: 100%;
     border-radius: 0.2rem;
   }
+
+  /* .words {
+    color: hsl(25, 100%, 94%);
+    font-size: 0;
+    line-height: 1;
+  }
+
+  .words span {
+    font-size: 1.7rem;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(-5%, 0);
+    }
+    50% {
+      text-shadow: 0 5px 15px rgba(255, 189, 57, 0.961);
+    }
+    100% {
+      transform: translate(5%, 0);
+    }
+  }
+
+  .words span:nth-child(2) {
+    animation-delay: 0.5s;
+  } */
 
   #contact-section {
     position: absolute;
