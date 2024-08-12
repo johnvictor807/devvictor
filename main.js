@@ -16,10 +16,6 @@ tabGroup.forEach((s, i) => (s.style.transform = `translateX(${i * 100}%)`));
 window.innerWidth < 768 &&
   (document.querySelector("#nav").style.transform = "translateX(100%)");
 
-document
-  .querySelector(".home")
-  .addEventListener("click", closeDisplayNavMobile2);
-
 function closeDisplayNavMobile() {
   document.querySelector("#nav").style.transform = "translateX(100%)";
   document.querySelector(".home").style.filter = "blur(0px)";
@@ -57,19 +53,37 @@ navLinks.forEach((e) =>
 );
 
 navBarList.addEventListener("click", function (e) {
-  navLinks.forEach((i) => i.classList.remove("clicked"));
-  const clicked = e.target.closest(".nav-link");
-  clicked.classList.add("clicked");
+  if (e.target.classList.contains("nav-link")) {
+    navLinks.forEach((i) => {
+      i.classList.remove("clicked");
+    });
+    e.target.classList.add("clicked");
+  }
 });
 
 //Nav menu dropdown
-navMobileOpen.addEventListener("click", function () {
+navMobileOpen.addEventListener("click", function (e) {
+  const closeNav = function (elem) {
+    if (!elem.target.closest("#nav")) {
+      closeDisplayNavMobile2();
+
+      document.querySelector("#main").removeEventListener("click", closeNav);
+    }
+  };
+
   document.querySelector("#nav").style.transform = "translateX(0%)";
+
   const viewportWidth = window.innerWidth;
   if (viewportWidth < 768) {
+    setTimeout(function () {
+      document.querySelector("#main").addEventListener("click", closeNav);
+    }, 500);
+
     document.querySelector(".home").style.filter = "blur(2px)";
     document.querySelector("#left-image").style.filter = "blur(2px)";
   }
+
+  e.stopPropagation();
 });
 
 navMobileClose.addEventListener("click", function () {
